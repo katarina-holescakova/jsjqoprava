@@ -7,7 +7,7 @@ $(document).ready(function(){
 
     var druh;
     var cena;   
-   $('#auta').change(function(){
+   $('#auta').click(function(){
    cena=parseInt (this.value);
    druh=$('#auta option:selected').text();
    $('#cena').text(cena);
