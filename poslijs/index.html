@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Objednávka auta</title>
+  </head>
+  <body>
+   <fieldset>
+       <legend>
+Objednávka automobilu
+       </legend>
+<h2>Výběr konkrétní značky vozu se základními cenami</h2>
+<select name="auta" id="auta" class="auta" onchange="autoroleta()">
+    <option value=" 1500000"> -Mercedes 1 500 000 Kč </option>
+    <option value=" 1200000">- Volvo 1 200 000 Kč </option>
+    <option value="1350000">- Audi 1 350 000 Kč </option>
+    <option value="1400000">- BMW 1 400 000 Kč </option>
+</select>
+<h2>Výběr barvy</h2>
+<div>
+    
+
+- 	Základní barva (bez příplatku)<input type="radio" name="barva" class="barva" id="economy" value="0"
+data-type="Základní barva – bez přirážky" onclick="radiobut()"> <br>
+
+-	Pálený lak (s příplatkem 5% ze základní ceny vozu)<input type="radio" class="barva" name="barva" id="paleny"
+value="0.05" data-type="Pálený lak (s příplatkem 5% ze základní ceny vozu)" onclick="radiobut()"><br>
+
+- 	Metalická barvy (s příplatkem 7% ze základní ceny vozu) <input type="radio" class="barva" name="barva" id="metal"
+value="0.07" data-type="Metalická barvy (s příplatkem 7% ze základní ceny vozu)" onclick="radiobut()"><br>
+</div>
+
+
+
+<h2>Dodatečna výbava automobilu</h2>
+<input type="checkbox" name="extra" class="extra"id="kamery"data-value="Parkovací kamery (+10 000 Kč)"data-price="10000"onclick="extravyber()">
+<label for="kamery">Parkovací kamery (+10 000 Kč)</label>
+
+<input type="checkbox" name="extra" class="extra" id="kola"data-value="Litá kola (+20 000 Kč)" data-price="20000"onclick="extravyber()">
+<label for="kola">Litá kola (+20 000 Kč)</label> 
+
+<input type="checkbox" name="extra" class="extra" id="sedacky"data-value="Kožené sedačky (+ 50 000 Kč)" data-price="50000"onclick="extravyber()">
+<label for="sedacky">Kožené sedačky (+ 50 000 Kč)</label>
+
+<input type="checkbox" name="tuning" class="tuning" id="tuning"data-value="Tuningová úprava (+20 % ze základní ceny vozu)" data-price="0.2"onclick="tun()">
+<label for="tuning">Tuningová úprava (+20 % ze základní ceny vozu)</label> 
+
+<h2>Vybraný automobil</h2>
+<p id="auto-prehlad">Zatial žiadna vybratá</p>
+<p>Farba:-- <span id="auto-farba"></span></p>
+<p>Výbava:-- <span id="pohodlie"></span></p>
+<p>Tuning:-- <span id="tuning-auta"></span></p>
+<p>Cena za daný automobil:-- <span id="cena"></span>Kč</p>
+
+<!-- <p>Pocet <span id="pocet-letenka"></span>ks</p>
+<button id="pridaj"onclick="dokosika()">Pridaj</button> -->
+<h2>Zhrnutie</h2>
+-kolko môžete utratiť? <input type="text" name="utrata" id="utrata">
+<button id="over" onclick="overenie()">OVER</button>
+<p id="overenie"></p>
+<p>Výsledok overenia:-- <span id="oznam"></span></p>
+<h3>E-mail</h3>
+<form action="#">
+    <input type="email" name="sprava" id="sprava"onKeyPress="jentextcisla();">
+    <input type="reset" value="Reset">
+</form>
+</fieldset> 
+
+    <script src="script.js"></script>
+
+  </body>
+</html>
