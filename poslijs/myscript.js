@@ -49,13 +49,16 @@ $('#tuning').click(function(){
     if($("#tuning").is(':checked')){
         tuni=parseFloat(cena*0.20);
         $('#tuning-auta').text("ano");
+         $('#cena').text(cena+(cena*priplatok)+zaDoplnky+tuni);
+
    } 
    else{
     tuni=parseFloat(cena*0);
     $('#tuning-auta').text("nie");
+    $('#cena').text(cena+(cena*priplatok)+zaDoplnky+tuni);
 
 }
-    $('#cena').text(cena+(cena*priplatok)+zaDoplnky+tuni);
+ 
 
 });
 
